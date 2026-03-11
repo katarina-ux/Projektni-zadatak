@@ -11,10 +11,32 @@ namespace Projektni_zadatak
     {
         public static void UnosZivotinja(string zapis)
         {
-          StreamWriter sw = new StreamWriter("zivotinje.txt", true);
+          StreamWriter sw = new StreamWriter("azil.txt", true);
             sw.WriteLine(zapis);
             sw.Close();
 
         }
+
+        internal static List<string> Ucitaj()
+        {
+            throw new NotImplementedException();
+        }
     }
+
+    public static class Ucitaj
+    {
+        public static List<string> Ucitaj()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("azil.txt");
+            string linija = sr.ReadToEnd();
+            while (linija != null) 
+            {
+                lista.Add(linija);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+	}
 }

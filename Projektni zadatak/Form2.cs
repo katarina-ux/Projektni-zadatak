@@ -23,15 +23,26 @@ namespace Projektni_zadatak
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click_2(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             string slika = openFileDialog1.FileName;
             string zapis = textBox1.Text + "|" + textBox2.Text + "|" + radioButton1.Checked + "|" + radioButton2.Checked + "|" + slika + "|" + textBox3.Text + "|" + checkBox1.Checked + "|" + checkBox2.Checked + "|" + numericUpDown1.Text + "|" + dateTimePicker1.Text + "|" + textBox4.Text;
             Admin.UnosZivotinja(zapis);
-        }
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            numericUpDown1.Value = 0;
+            dateTimePicker1.Value = DateTime.Now;
+            checkBox1 .Checked = false;
+            checkBox2 .Checked = false;
+            textBox4.Clear();
 
-        private void button1_Click_1(object sender, EventArgs e)
+		}
+
+        private void Button1_Click_1(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             string slika = openFileDialog1.FileName;    
