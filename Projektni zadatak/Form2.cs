@@ -23,7 +23,18 @@ namespace Projektni_zadatak
 
         }
 
-        private void Button2_Click_2(object sender, EventArgs e)
+    
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string slika = openFileDialog1.FileName;
+            pictureBox1.Load(slika);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             string slika = openFileDialog1.FileName;
@@ -36,17 +47,9 @@ namespace Projektni_zadatak
             radioButton2.Checked = false;
             numericUpDown1.Value = 0;
             dateTimePicker1.Value = DateTime.Now;
-            checkBox1 .Checked = false;
-            checkBox2 .Checked = false;
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
             textBox4.Clear();
-
-		}
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-            openFileDialog1.ShowDialog();
-            string slika = openFileDialog1.FileName;    
-            pictureBox1.Load(slika);
         }
     }
 }

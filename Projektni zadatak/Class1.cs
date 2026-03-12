@@ -9,28 +9,26 @@ namespace Projektni_zadatak
 {
     public static class Admin
     {
+
         public static void UnosZivotinja(string zapis)
         {
-          StreamWriter sw = new StreamWriter("azil.txt", true);
+            StreamWriter sw = new StreamWriter("azil.txt", true);
             sw.WriteLine(zapis);
             sw.Close();
 
         }
 
-        internal static List<string> Ucitaj()
-        {
-            throw new NotImplementedException();
-        }
-    }
 
-    public static class Ucitaj
-    {
+
+
+
+
         public static List<string> Ucitaj()
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
             string linija = sr.ReadToEnd();
-            while (linija != null) 
+            while (linija != null)
             {
                 lista.Add(linija);
                 linija = sr.ReadLine();
@@ -38,5 +36,6 @@ namespace Projektni_zadatak
             sr.Close();
             return lista;
         }
-	}
+    }
+	
 }
