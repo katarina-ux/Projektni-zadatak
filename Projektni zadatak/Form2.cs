@@ -36,8 +36,35 @@ namespace Projektni_zadatak
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
             string slika = openFileDialog1.FileName;
+            string spol = "";
+            string kastriran = "";
+            if (radioButton1 == true)
+            {
+                kastriran = "Kastriran";
+            }
+            else
+            {
+                kastriran = "ZNije kastriran";
+            }
+            string cijepljen = "";
+            if (radioButton3 == true)
+            {
+                cijepljen = "Cijepljen";
+            }
+            else
+            {
+                cijepljen = "Nije cijepljen";
+            }
+            if (radioButton5 == true)
+            {
+                spol = "Muško";
+            }
+            else
+            {
+                spol = "Žensko";
+            }
+            openFileDialog1.ShowDialog();
             string zapis = textBox1.Text + "|" + textBox2.Text + "|" + radioButton1.Checked + "|" + radioButton2.Checked + "|" + slika + "|" + textBox3.Text + "|" + checkBox1.Checked + "|" + checkBox2.Checked + "|" + numericUpDown1.Text + "|" + dateTimePicker1.Text + "|" + textBox4.Text;
             Admin.UnosZivotinja(zapis);
             textBox1.Clear();
