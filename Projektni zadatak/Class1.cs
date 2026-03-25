@@ -27,7 +27,7 @@ namespace Projektni_zadatak
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
-            string linija = sr.ReadToEnd();
+            string linija = sr.ReadLine();
             while (linija != null)
             {
                 lista.Add(linija);
@@ -37,11 +37,11 @@ namespace Projektni_zadatak
             return lista;
         }
 
-        public static List<string>Vrsta()
+        public static List<string> Vrste()
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
-            string linija = sr.ReadToEnd();
+            string linija = sr.ReadLine();
             while (linija != null)
             {
                 string[] dijelovi = linija.Split('|');
@@ -56,11 +56,11 @@ namespace Projektni_zadatak
         {
             List<string> lista = new List<string>();
             StreamReader sr = new StreamReader("azil.txt");
-            string linija = sr.ReadToEnd();
+            string linija = sr.ReadLine();
             while (linija != null)
             {
                 string[] dijelovi = linija.Split('|');
-                
+
                 if (dijelovi[1] == kriterij)
                 {
                     lista.Add(linija);
@@ -70,6 +70,48 @@ namespace Projektni_zadatak
             sr.Close();
             return lista;
         }
+
+        public static void UnosUdomitelja(string zapis)
+        {
+            StreamWriter sw = new StreamWriter("udomitelji.txt", true);
+            sw.WriteLine(zapis);
+            sw.Close();
+        }
+
+        public static List<string> UcitajUdomitelje()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("udomitelji.txt");
+            string linija = sr.ReadLine();
+            while (linija != null)
+            {
+                lista.Add(linija);
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            return lista;
+        }
+
+        public static double ProsjecnaDob()
+        {
+            List<string> lista = new List<string>();
+            StreamReader sr = new StreamReader("azil.txt");
+            string linija = sr.ReadLine();
+            int brojac = 0;
+            int suma = 0;
+            while (linija != null)
+            {
+                string[] dijelovi = linija.Split('|');
+                int dob = int.Parse(dijelovi[4]);
+                suma += dob;
+                brojac++;
+                linija = sr.ReadLine();
+            }
+            sr.Close();
+            double prosjek = (double)suma / brojac;
+            return prosjek;
+
+
+        }
     }
-	
 }
