@@ -58,5 +58,15 @@ namespace Projektni_zadatak
                  listBox1.Items.Add(s.Replace(";", " "));
 			}
 		}
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

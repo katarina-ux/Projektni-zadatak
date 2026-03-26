@@ -36,10 +36,10 @@ namespace Projektni_zadatak
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string slika = openFileDialog1.FileName;
+          
             string spol = "";
             string kastriran = "";
-            if (radioButton1 == true)
+            if (checkBox2.Checked == true)
             {
                 kastriran = "Kastriran";
             }
@@ -48,7 +48,7 @@ namespace Projektni_zadatak
                 kastriran = "ZNije kastriran";
             }
             string cijepljen = "";
-            if (radioButton3 == true)
+            if (checkBox1.Checked == true)
             {
                 cijepljen = "Cijepljen";
             }
@@ -56,7 +56,7 @@ namespace Projektni_zadatak
             {
                 cijepljen = "Nije cijepljen";
             }
-            if (radioButton5 == true)
+            if (radioButton1.Checked == true)
             {
                 spol = "Muško";
             }
@@ -64,7 +64,7 @@ namespace Projektni_zadatak
             {
                 spol = "Žensko";
             }
-            openFileDialog1.ShowDialog();
+            string slika = openFileDialog1.FileName;
             string zapis = textBox1.Text + "|" + textBox2.Text + "|" + radioButton1.Checked + "|" + radioButton2.Checked + "|" + slika + "|" + textBox3.Text + "|" + checkBox1.Checked + "|" + checkBox2.Checked + "|" + numericUpDown1.Text + "|" + dateTimePicker1.Text + "|" + textBox4.Text;
             Admin.UnosZivotinja(zapis);
             textBox1.Clear();

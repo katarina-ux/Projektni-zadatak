@@ -103,14 +103,14 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(60, 254);
+            this.numericUpDown1.Location = new System.Drawing.Point(60, 249);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown1.TabIndex = 5;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(62, 310);
+            this.dateTimePicker1.Location = new System.Drawing.Point(60, 307);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 6;
@@ -149,6 +149,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(332, 114);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(168, 167);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -170,7 +171,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(378, 358);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 23);
+            this.button2.Size = new System.Drawing.Size(76, 36);
             this.button2.TabIndex = 13;
             this.button2.Text = "Spremi";
             this.button2.UseVisualStyleBackColor = true;
@@ -178,28 +179,28 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 62);
+            this.textBox1.Location = new System.Drawing.Point(114, 60);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 14;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 114);
+            this.textBox2.Location = new System.Drawing.Point(114, 100);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 15;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(118, 158);
+            this.textBox3.Location = new System.Drawing.Point(114, 142);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 16;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(393, 56);
+            this.textBox4.Location = new System.Drawing.Point(378, 53);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 17;
