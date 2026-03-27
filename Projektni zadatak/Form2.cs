@@ -65,7 +65,7 @@ namespace Projektni_zadatak
                 spol = "Žensko";
             }
             string slika = openFileDialog1.FileName;
-            string zapis = textBox1.Text + "|" + textBox2.Text + "|" + radioButton1.Checked + "|" + radioButton2.Checked + "|" + slika + "|" + textBox3.Text + "|" + checkBox1.Checked + "|" + checkBox2.Checked + "|" + numericUpDown1.Text + "|" + dateTimePicker1.Text + "|" + textBox4.Text;
+            string zapis = textBox1.Text + "|" + textBox2.Text + "|" + textBox3.Text + "|" + spol + "|" + numericUpDown1.Text + "|" + dateTimePicker1.Text + "|" + cijepljen  + "|" + kastriran + "|" +textBox4.Text + "|" + slika;
             Admin.UnosZivotinja(zapis);
             textBox1.Clear();
             textBox2.Clear();

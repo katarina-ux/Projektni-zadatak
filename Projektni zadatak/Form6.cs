@@ -22,21 +22,25 @@ namespace Projektni_zadatak
             List<string> lista = Admin.Ucitaj();
             int brojac = 0;
             foreach (string s in lista)
-            { 
-              brojac++;
-			}
+            {
+                brojac++;
+            }
             Statistika.Items.Add("Ukupan broj životinja: " + brojac);
             List<string> udomitelj = Admin.UcitajUdomitelje();
             int udomljenih = 0;
             foreach (string s in udomitelj)
             {
                 udomljenih++;
-			}
+            }
             Statistika.Items.Add("Ukupan broj udomljenih životinja: " + udomljenih);
             Statistika.Items.Add("Ukupan broj neudomljenih životinja: " + (brojac - udomljenih));
             Statistika.Items.Add("Prosječna dob životinja: " + Admin.ProsjecnaDob() + "godina");
+            Statistika.Items.Add("Broj životinja po vrstama: ");
+            foreach (string s in Admin.VrsteBroj())
+            {
+                Statistika.Items.Add(s);
 
-
-		}
+            }
+        }
     }
 }

@@ -52,6 +52,33 @@ namespace Projektni_zadatak
             sr.Close();
             return lista;
         }
+
+        public static List<string> VrsteBroj()
+        {
+            List<string> lista = Ucitaj();
+            List<string> lista2 = Vrste();
+            List<string> lista3 = new List<string>();
+            StreamReader sr = new StreamReader("azil.txt");
+
+            foreach (string vrsta in lista2)
+            {
+                int brojac = 0;
+                foreach (string zapis in lista)
+                {
+                    string[] dijelovi = zapis.Split('|');
+                    if (dijelovi[1] == vrsta)
+                    {
+                        brojac++;
+                    }
+                }
+                lista3.Add(vrsta + " : " + brojac);
+            }
+            return lista3;
+
+        }
+
+        
+
         public static List<string> PronadiPoVrsti(string kriterij)
         {
             List<string> lista = new List<string>();
@@ -110,6 +137,8 @@ namespace Projektni_zadatak
             sr.Close();
             double prosjek = (double)suma / brojac;
             return prosjek;
+
+
 
 
         }
